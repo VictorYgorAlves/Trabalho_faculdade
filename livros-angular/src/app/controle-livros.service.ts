@@ -7,10 +7,10 @@ export class ControleLivrosService {
     {
       codigo: 1,
       codEditora: 3,
-      titulo: 'Use a Cabeça: Java',
+      titulo: 'Diario de um banana',
       resumo:
-        'Use a Cabeça! Java é uma experiência completa de aprendizado em programação orientada a objetos (OO) e Java.',
-      autores: ['Bert Bates', 'Kathy Sierra'],
+        'Conta a historia de Greg Heffley, um garoto que está prestes a entrar no ensino médio e que se vê diante de uma série de desafios e situações engraçadas.',
+      autores: ['Jeff Kinney'],
     },
     {
       codigo: 2,
@@ -23,10 +23,10 @@ export class ControleLivrosService {
     {
       codigo: 3,
       codEditora: 1,
-      titulo: 'The C++ Programming Language',
+      titulo: 'O Senhor dos Anéis',
       resumo:
-        'Uma apresentação da linguagem C++, com seus recursos, técnicas de programação e exemplos para o desenvolvimento de software.',
-      autores: ['Bjarne Stroustrup'],
+        'A história de Frodo Baggins, um hobbit que herda um anel mágico e deve destruí-lo para salvar a Terra Média.',
+      autores: ['J.R.R. Tolkein'],
     },
   ];
 
@@ -35,7 +35,6 @@ export class ControleLivrosService {
   }
 
   incluir(livro: Livro): void {
-    // O zero permite incluir o primeiro livro depois de esvaziar o catálogo.
     livro.codigo = Math.max(0, ...this.livros.map((item) => item.codigo)) + 1;
     this.livros.push(livro);
   }

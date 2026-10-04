@@ -4,7 +4,7 @@ import { Editora } from './editora';
 @Injectable()
 export class ControleEditoraService {
   private editoras: Array<Editora> = [
-    { codEditora: 1, nome: 'Addison Wesley' },
+    { codEditora: 1, nome: 'Rocco' },
     { codEditora: 2, nome: 'Pearson' },
     { codEditora: 3, nome: 'Alta Books' },
   ];
