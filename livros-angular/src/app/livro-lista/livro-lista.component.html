@@ -1,0 +1,40 @@
+<main class="container py-2">
+  <h1>Catálogo de Livros</h1>
+  <div class="table-responsive">
+    <table class="table table-striped align-top" aria-label="Catálogo de livros">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col" class="col-titulo">Título</th>
+          <th scope="col" class="col-resumo">Resumo</th>
+          <th scope="col" class="col-editora">Editora</th>
+          <th scope="col" class="col-autores">Autores</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let livro of livros">
+          <td>
+            {{ livro.titulo }}
+            <button
+              type="button"
+              class="btn btn-danger btn-sm d-block"
+              (click)="excluir(livro.codigo)"
+              [attr.aria-label]="'Excluir ' + livro.titulo"
+            >
+              Excluir
+            </button>
+          </td>
+          <td>{{ livro.resumo }}</td>
+          <td>{{ obterNome(livro.codEditora) }}</td>
+          <td>
+            <ul>
+              <li *ngFor="let autor of livro.autores">{{ autor }}</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p *ngIf="livros.length === 0" class="text-secondary" role="status">
+    Nenhum livro cadastrado. Use Novo para incluir um livro.
+  </p>
+</main>

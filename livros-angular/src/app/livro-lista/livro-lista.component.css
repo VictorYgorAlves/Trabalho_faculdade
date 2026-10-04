@@ -1,0 +1,17 @@
+.col-titulo,
+.col-editora,
+.col-autores {
+  width: 16.6667%;
+}
+
+.col-resumo {
+  width: 50%;
+}
+
+table {
+  min-width: 680px;
+}
+
+td {
+  overflow-wrap: anywhere;
+}
