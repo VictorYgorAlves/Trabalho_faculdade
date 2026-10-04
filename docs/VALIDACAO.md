@@ -26,7 +26,7 @@ Verificações por asserções executadas contra as classes TypeScript:
 - Tabela exibe título, resumo, nome da editora e autores em uma lista.
 - Menu **Novo** abre `/dados`; **Catálogo** retorna a `/lista`.
 - Título vazio impede o envio e recebe o foco com a mensagem nativa do navegador.
-- Opção vazia de editora impede o envio e recebe o foco com a mensagem nativa do navegador.
+- O formulário abre com “Selecione uma editora”; essa opção impede o envio e recebe o foco com a mensagem de validação HTML5.
 - Cadastro com dois autores em linhas distintas inclui os dados e retorna à listagem.
 - Editora escolhida no formulário é exibida corretamente na listagem.
 - Exclusão remove apenas o livro selecionado.

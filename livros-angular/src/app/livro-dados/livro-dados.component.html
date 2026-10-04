@@ -25,13 +25,15 @@
     <div class="mb-2">
       <label for="editora" class="form-label mb-0">Editora</label>
       <select
+        #editoraSelect
         id="editora"
         name="editora"
         class="form-select"
         [(ngModel)]="livro.codEditora"
+        (ngModelChange)="validarEditora($event)"
         required
       >
-        <option value="">Selecione uma editora</option>
+        <option [ngValue]="0">Selecione uma editora</option>
         <option *ngFor="let editora of editoras" [ngValue]="editora.codEditora">
           {{ editora.nome }}
         </option>
